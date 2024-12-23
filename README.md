@@ -12,16 +12,24 @@ Make sure both the program "xsb" and "dot" reside in your PATH.
 - bison and lex      
 - graphviz   
 - epstopdf:
+- xutils-dev 包含makedepend，加速XSB编译的工具
 
 XSB Can be installed by using the following steps:   
 ```
-wget "https://nav.dl.sourceforge.net/project/xsb/xsb/5.0%20%28Green%20Tea%29/XSB-5.0.tar.gz" -O /usr/local/bin/XSB-5.0.tar.gz
+wget "wget https://phoenixnap.dl.sourceforge.net/project/xsb/xsb/5.0%20%28Green%20Tea%29/XSB-5.0.tar.gz" -O /usr/local/bin/XSB-5.0.tar.gz
 cd /usr/local/bin/
 tar -zxvf XSB-5.0.tar.gz   
 cd XSB-5.0/build
 ./configure
 ./makexsb
 ```   
+
+或者不放usr/local/bin下，换成这种方式：
+```
+export PATH=/home/mulval/xsb/XSB/bin:$PATH
+```
+
+参考：https://zhuanlan.zhihu.com/p/140924872
 
 The other dependencies can be installed by using distro package management systems. For example, in Ubuntu:  
 ```     
